@@ -20,10 +20,10 @@ export function WelcomeScreen({ onSelectMode }: WelcomeScreenProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <img src={logo} alt="Miraki Labs" className="h-16 w-auto mx-auto mb-6" />
+          <img src="https://ik.imagekit.io/rdwxgbmgm/Catylist/Miraki_catalyst-removebg-preview.png" alt="Miraki Labs" className="h-16 w-auto mx-auto mb-6" />
           <h1 className="text-4xl mb-4">Manufacturing Intelligence Platform</h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Transform your factory operations from chaos to clarity with AI-powered insights 
+            Transform your factory operations from chaos to clarity with AI-powered insights
             and real-time analytics
           </p>
           <Badge className="mt-4 bg-gradient-to-r from-primary to-success text-white px-4 py-2">

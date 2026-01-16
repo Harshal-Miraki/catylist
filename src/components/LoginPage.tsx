@@ -20,7 +20,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !password) {
       toast.error("Please enter email and password");
       return;
@@ -31,7 +31,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
     // Simulate authentication delay
     setTimeout(() => {
       const user = users.find(u => u.email === email && u.password === password && u.status === "active");
-      
+
       if (user) {
         toast.success(`Welcome back, ${user.name}!`);
         onLogin(user);
@@ -40,7 +40,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
           description: "Please check your email and password",
         });
       }
-      
+
       setIsLoading(false);
     }, 1000);
   };
@@ -70,13 +70,16 @@ export function LoginPage({ onLogin }: LoginPageProps) {
       >
         {/* Left Side - Branding */}
         <div className="hidden lg:block space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="h-16 w-16 rounded-xl bg-primary flex items-center justify-center">
+          <div className="flex items-center justify-center gap-3">
+            {/* <div className="h-16 w-16 rounded-xl bg-primary flex items-center justify-center">
               <Factory className="h-8 w-8 text-primary-foreground" />
-            </div>
+            </div> */}
             <div>
-              <h1 className="text-3xl">Miraki MIP</h1>
-              <p className="text-muted-foreground">Manufacturing Intelligence Platform</p>
+              <img
+                src="https://ik.imagekit.io/rdwxgbmgm/Catylist/catalyst_lg_final.png?updatedAt=1768547434126"
+                alt="Catalyst"
+                className="h-20 w-auto"
+              />
             </div>
           </div>
 

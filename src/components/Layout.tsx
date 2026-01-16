@@ -1,9 +1,9 @@
 import { ReactNode, useState } from "react";
-import { 
-  Network, 
-  Database, 
-  BarChart3, 
-  Settings, 
+import {
+  Network,
+  Database,
+  BarChart3,
+  Settings,
   Boxes,
   Sparkles,
   ChevronDown,
@@ -61,8 +61,8 @@ export function Layout({ children, currentPage, onPageChange }: LayoutProps) {
       {/* Sidebar */}
       <aside className="w-64 bg-sidebar border-r border-sidebar-border flex flex-col">
         {/* Logo */}
-        <div className="h-16 px-6 flex items-center border-b border-sidebar-border">
-          <img src={logo} alt="Miraki Labs" className="h-10 w-auto" />
+        <div className="h-16 px-6 flex items-center justify-center border-b border-sidebar-border">
+          <img src="https://ik.imagekit.io/rdwxgbmgm/Catylist/catalyst_lg_final.png?updatedAt=1768547434126" alt="Miraki Labs" className="h-10 w-auto" />
         </div>
 
         {/* Navigation */}
@@ -74,11 +74,10 @@ export function Layout({ children, currentPage, onPageChange }: LayoutProps) {
               <button
                 key={item.id}
                 onClick={() => onPageChange(item.id)}
-                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
-                  isActive
-                    ? "bg-sidebar-primary text-sidebar-primary-foreground"
-                    : "text-sidebar-foreground hover:bg-sidebar-accent"
-                } ${item.premium ? "border border-accent/30" : ""}`}
+                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${isActive
+                  ? "bg-sidebar-primary text-sidebar-primary-foreground"
+                  : "text-sidebar-foreground hover:bg-sidebar-accent"
+                  } ${item.premium ? "border border-accent/30" : ""}`}
               >
                 <Icon className="h-5 w-5" />
                 <span className="flex-1 text-left text-sm">{item.label}</span>
@@ -132,7 +131,7 @@ export function Layout({ children, currentPage, onPageChange }: LayoutProps) {
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
-            
+
             <Button variant="ghost" size="icon" className="relative">
               <Bell className="h-5 w-5" />
               <span className="absolute top-1 right-1 h-2 w-2 bg-destructive rounded-full"></span>
